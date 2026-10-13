@@ -1,0 +1,270 @@
+
+* {
+  margin: 0;         
+  padding: 0;          
+
+}
+
+body {
+  font-family: Montserrat, Arial, sans-serif;   
+}
+
+a {
+  text-decoration: none;   
+  color: #3d4150;          
+}
+
+
+
+.header {
+  height: 80px;                  
+  background: #f5f7fc;            
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);   
+
+  display: flex;                 
+  justify-content: space-between;
+  align-items: center;            
+  padding: 0 40px;            
+
+  position: sticky;              
+  top: 0;
+
+}
+
+
+
+.menu {
+  display: flex;          
+  align-items: center;
+}
+
+.menu-item {
+  height: 80px;          
+  display: flex;
+  align-items: center;
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;      
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.menu-link:hover {
+  color: black;          
+}
+.enroll-btn {
+  background: #1d72e8;  
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;  
+  font-weight: 600;
+  margin-left: 14px;
+}
+
+.enroll-btn:hover {
+  background: #155fcb;   
+}
+
+
+   /* 4) BADA BOX (Courses ka dropdown) */
+
+/* Shuru mein CHHUPA hua */
+.mega {
+  display: none;               /* none = bilkul chhupa */
+  position: absolute;          /* header ke hisaab se jagah lega */
+  top: 80px;                   /* header ke bilkul neeche */
+  left: 0;                     /* screen ke left se */
+  right: 0;                    /* screen ke right tak (poori width) */
+  background: white;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+/* ★ SAB SE ZAROORI RULE ★
+   Jab "has-mega" par mouse aaye, to us ke andar wala ".mega" dikha do.
+   (Sirf bade screen par: min-width: 901px) */
+@media (min-width: 901px) {
+  .has-mega:hover .mega {
+    display: block;            /* block = dikhao */
+  }
+}
+
+
+
+.mega-columns {
+  display: flex;               
+  padding: 30px 30px 20px 30px;
+}
+
+.column {
+  width: 20%;                
+  padding-right: 20px;
+}
+
+.column-title {
+  font-size: 13px;
+  color: #6b7280;            
+  margin-bottom: 14px;
+}
+
+.course-link {
+  
+  display: flex;            
+  align-items: center;     
+  gap: 10px;               
+  padding: 10px 0;
+  font-size: 15px;
+  color: #4b5060;
+}
+
+
+.course-link:hover {
+  color: black;        
+}
+
+
+
+.top-courses {
+  background: #f8f9fc;
+  border-top: 1px solid #e5e7ee;  
+  padding: 22px 30px 26px 30px;
+}
+
+.top-title {
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.cards {
+  display: flex;         
+  gap: 24px;                  
+}
+
+.card {
+      
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: white;
+  border: 1px solid #e5e7ee;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);   
+}
+
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;     
+  background: #2f7de9;       
+  display: flex;
+  align-items: center;       
+  justify-content: center;
+  flex-shrink: 0;       
+}
+
+.card-name {
+  font-weight: 500;
+  font-size: 15px;
+}
+
+
+
+.see-all {
+  text-align: center;      
+  padding: 16px;
+  border-top: 1px solid #e5e7ee;
+}
+
+.see-all a {
+  color: #1d72e8;
+  font-weight: 500;
+}
+
+
+
+
+
+
+.icon {
+  width: 15px;
+  height: 15px;
+}
+
+.icon_2{
+  width: 200;
+  height: 200;
+}
+.icona{
+  width: 14px;
+  height: 14px;
+}
+
+
+
+/* icon aur text wala fasla */
+.course-link, .column-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+
+.card-icon {
+  color: white;
+}
+.card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.iconarrow {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.4s;  
+}
+
+.has-mega:hover .iconarrow{
+  transform: rotate(180deg);    
+}
+
+
+.chat-btn {
+  position: fixed;       
+  right: 30px;          
+  bottom: 30px;         
+  
+
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;    
+  background: linear-gradient(135deg, #2f7de9, #1a5fc9);  
+  color: white;        
+
+  display: flex;
+  align-items: center;      
+  justify-content: center;
+
+  
+  box-shadow: 0 0 0 10px rgba(47, 125, 233, 0.2),
+              0 8px 20px rgba(0, 0, 0, 0.2);
+
+  transition: transform 0.2s;
+}
+
+.chat-btn svg {
+  width: 35px;          
+  height: 35px;
+}
+
+.chat-btn:hover {
+  transform: scale(1.09); 
+}
+
+
+
